@@ -28,7 +28,7 @@ export default function Footer() {
 
        
         <p className="text-xs text-[#261008] text-center">
-          © 2024 Your Company, Inc. All rights reserved.
+          © 2024 Academia Inteligente, Inc. Todos os direitos reservados.
         </p>
       </div>
     </footer>

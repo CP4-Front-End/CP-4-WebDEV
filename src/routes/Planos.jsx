@@ -99,7 +99,7 @@ export default function Example() {
                 <li key={feature} className="flex gap-x-3">
                   <CheckIcon
                     aria-hidden="true"
-                    className={classNames(tier.featured ? 'text-indigo-400' : 'text-indigo-400', 'h-6 w-5 flex-none')}
+                    className={classNames(tier.featured ? 'text-[#261008]' : 'text-[#261008]', 'h-6 w-5 flex-none')}
                   />
                   {feature}
                 </li>
