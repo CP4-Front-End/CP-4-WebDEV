@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Tabela = ({resultado}) => {
-    const valor = parseFloart(resultado);
-    console.log(valor);
-    if(resultado< 18.5){
+const Tabela = ({resultadoImc}) => {
+    const resultado = parseFloat(resultadoImc);
+    console.log(resultado)
+    if(resultado < 18.5){
         return (
             <> 
                 <td>Abaixo do Peso</td>
@@ -49,12 +49,12 @@ const Tabela = ({resultado}) => {
     }
 }
 
-const Resultado = ({resultado}) => {
+const Resultado = ({resultadoImc}) => {
   return (
     <div>
         <div className="resultado">
             <h2>
-                Seu IMC é de: <span className="img-span">{resultado}</span>
+                Seu IMC é de: <span className="img-span">{resultadoImc}</span>
             </h2>
         </div>
         <table className="tabela">
@@ -66,7 +66,7 @@ const Resultado = ({resultado}) => {
             </thead>
             <tbody className="tabelaBody">
                 <tr>
-                    <Tabela resultado={resultado}/>
+                    <Tabela resultadoImc={resultadoImc}/>
                 </tr>
             </tbody>
         </table>

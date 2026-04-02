@@ -6,26 +6,27 @@ const Imc= () => {
     // hooks
     const [peso, setPeso] = useState(0)
     const [altura, setAltura] = useState(0)
-    const [resultado, setResultado] = useState(0)
-    const [mostrarResultado, setMostrarResultado] = useState(false)
+    const [resultadoImc, setResultadoImc] = useState(0)
+    const [mostrarresultado, setMostrarResultado] = useState(false)
 
-    const calculaIMC = ()=>{
+    const calcularImc = ()=>{
         if(peso > 0 && altura > 0){
             let imc = peso / altura**2
-            setResultado(imc)
+            setResultadoImc(imc)
         }else{
             alert("insira um valor válido")
         }
     }
 
     useEffect(()=>{
-        resultado > 0 ? setMostrarResultado(true):setMostrarResultado(false)
-    }, [resultado])
+        resultadoImc > 0 ? setMostrarResultado(true):setMostrarResultado(false)
+    }, [resultadoImc])
 
   return (
      <section>
-        <div className="box">
-            <form>
+        <div class="max-w-sm mx-auto mt-10 p-6 bg-white rounded-xl shadow-md hover:shadow-1 transform hover:scale-105 transition duration-500">
+            <h2 className="text-xl font-bold text-[#03A63C]">Calcule seu IMC</h2>
+            <form className="mt-2 text-black">
             <div>
                 <label htmlFor="altura">Altura<span>(ex: 1.80)</span></label>
                 <input
@@ -47,12 +48,13 @@ const Imc= () => {
                 onChange={({target})=>setPeso(parseFloat(target.value))}
                 />
             </div>
-            <button type="button" onClick={calcularImc}>Calcular</button>
+            <button type="button" onClick={calcularImc}className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"> Calcular</button>
             </form>
         </div>
         {mostrarresultado &&(
         //Envia o valor do resultado com 2 casas decimais via props para o componente resultado
-        <Resultado resultado={resultado.toFixed(2)}/>
+        
+        <Resultado resultadoImc={resultadoImc.toFixed(2)}/>
       )}
     </section>
   )
