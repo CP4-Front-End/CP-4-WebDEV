@@ -3,17 +3,18 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Unidades', href: '#' },
+  { name: 'IMC', href: '/imc' },
+  { name: 'Bioimpedância', href: '#' },
+  { name: 'Planos', href: '/planos' },
+  { name: 'Contato', href: '/contato' },
 ]
 
-export default function Example() {
+export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-gray-900">
+    <div className="bg-[#D9D9D9]">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
@@ -38,7 +39,7 @@ export default function Example() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-white">
+              <a key={item.name} href={item.href} className="text-sm/6 font-semibold  text-[#261008]">
                 {item.name}
               </a>
             ))}
@@ -51,13 +52,13 @@ export default function Example() {
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
+                <span className="sr-only">Academia Inteligente</span>
                 <img
                   alt=""
-                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                  src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   className="h-8 w-auto"
                 />
               </a>
@@ -111,31 +112,22 @@ export default function Example() {
           />
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
-              Announcing our next round of funding.{' '}
-              <a href="#" className="font-semibold text-indigo-400">
-                <span aria-hidden="true" className="absolute inset-0" />
-                Read more <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </div>
           <div className="text-center">
-            <h1 className="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">
-              Data to enrich your online business
+            <h1 className="text-5xl font-semibold tracking-tight text-balance text-[#03A63C] sm:text-7xl">
+              Academia Inteligente
             </h1>
-            <p className="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
+            <p className="mt-8 text-lg font-medium text-pretty text-[#261008] sm:text-xl/8">
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
               fugiat veniam occaecat.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
-                className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                className="rounded-md bg-[#F2E205] px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
                 Get started
               </a>
-              <a href="#" className="text-sm/6 font-semibold text-white">
+              <a href="#" className="text-sm/6 font-semibold text-[#261008]">
                 Learn more <span aria-hidden="true">→</span>
               </a>
             </div>
