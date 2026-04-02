@@ -66,6 +66,12 @@ const Imc = () => {
                 />
               </div>
 
+            {/* RESULTADO */}
+        {mostrarresultado && (
+          <div className="w-full max-w-md mt-6">
+            <Resultado resultadoImc={resultadoImc.toFixed(2)} />
+          </div>
+        )}
               {/* BOTÃO */}
               <button
                 type="button"
@@ -79,12 +85,7 @@ const Imc = () => {
           </div>
         )}
 
-        {/* RESULTADO */}
-        {mostrarresultado && (
-          <div className="w-full max-w-md mt-6">
-            <Resultado resultadoImc={resultadoImc.toFixed(2)} />
-          </div>
-        )}
+        
 
       </section>
     </>

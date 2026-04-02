@@ -3,9 +3,9 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Unidades', href: '#' },
+  { name: 'Unidades', href: '/unidades' },
   { name: 'IMC', href: '/imc' },
-  { name: 'Bioimpedância', href: '' },
+  { name: 'Bioimpedância', href: '/biopedancia' },
   { name: 'Contato', href: '/contato' },
 ]
 
@@ -100,8 +100,7 @@ export default function Home() {
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        >
+          className="absolute inset-x-0 top-40 z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
           <div
             style={{
               clipPath:
@@ -134,7 +133,7 @@ export default function Home() {
         </div>
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+          className="inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
         >
           <div
             style={{

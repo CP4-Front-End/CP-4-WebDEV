@@ -5,7 +5,8 @@ import Error from "./routes/Error";
 import Planos from './routes/Planos';
 import Imc from './routes/Imc';
 import Contato from './routes/Contato';
-
+import Footer from './components/Footer';
+import Unidades from './routes/Unidades'
 
 const App = () => {
   
@@ -17,7 +18,9 @@ const App = () => {
         <Route path='/planos' element={<Planos/>}/>
         <Route path='/imc' element={<Imc/>}/>
         <Route path="/contato" element={<Contato/>}/>
+        <Route path="/unidades" element={<Unidades/>}/>
       </Routes>
+      <Footer/>
     </BrowserRouter> 
   )
 }

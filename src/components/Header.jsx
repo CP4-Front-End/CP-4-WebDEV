@@ -3,13 +3,13 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Unidades', href: '#' },
+  { name: 'Unidades', href: '/unidades' },
   { name: 'IMC', href: '/imc' },
   { name: 'Bioimpedância', href: '' },
   { name: 'Contato', href: '/contato' },
 ]
 
-export default function Home() {
+export default function Header({ abrirCalculadora }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -19,11 +19,12 @@ export default function Home() {
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Academia Inteligente</span>
-              <img
+              <a href="/"><img
                 alt=""
                 src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
                 className="h-8 w-auto"
               />
+              </a>
             </a>
           </div>
           <div className="flex lg:hidden">
@@ -119,12 +120,12 @@ export default function Home() {
               O IMC (Índice de Massa Corporal) é uma medida internacional, adotada pela Organização Mundial da Saúde (OMS), utilizada para avaliar se uma pessoa está em seu peso ideal, com sobrepeso ou abaixo do peso, baseando-se na relação entre peso e altura.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a onClick={() => setMostrarCalculadora(true)}
+              <a onClick={abrirCalculadora}
                 className="rounded-md bg-[#F2E205] px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs transition: duration-300 hover:bg-[#03A63C] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
                 Calcular IMC
               </a>
-              <a href="#" className="text-sm/6 font-semibold text-[#261008]">
+              <a target='blank' href="https://www.who.int/pt/about" className="text-sm/6 font-semibold text-[#261008]">
                 Sobre a OMS <span aria-hidden="true">→</span>
               </a>
             </div>
