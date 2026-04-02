@@ -3,10 +3,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './routes/Home';
 import Error from "./routes/Error";
 import Planos from './routes/Planos';
-import Imc from './routes/Imc'
+import Imc from './routes/Imc';
 import Contato from './routes/Contato';
 
-function App() {
+
+const App = () => {
   
   return (
     <BrowserRouter>
