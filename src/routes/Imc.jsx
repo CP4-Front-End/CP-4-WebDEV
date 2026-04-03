@@ -7,7 +7,6 @@ const Imc = () => {
   const [altura, setAltura] = useState(0)
   const [resultadoImc, setResultadoImc] = useState(0)
   const [mostrarresultado, setMostrarResultado] = useState(false)
-  const [mostrarCalculadora, setMostrarCalculadora] = useState(false)
 
   const calcularImc = () => {
     if (peso > 0 && altura > 0) {
@@ -24,13 +23,11 @@ const Imc = () => {
 
   return (
     <>
-      <Header abrirCalculadora={() => setMostrarCalculadora(true)} />
+      <Header />
 
       <section className="min-h-screen bg-[#D9D9D9] flex flex-col items-center pt-28 px-4">
 
-        {/* CARD */}
-        {mostrarCalculadora && (
-          <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8 transition hover:shadow-xl">
+        <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8 transition hover:shadow-xl">
 
             <h2 className="text-2xl font-bold text-[#03A63C] text-center mb-6">
               Calcule seu IMC
@@ -38,7 +35,6 @@ const Imc = () => {
 
             <form className="flex flex-col gap-5 text-[#261008]">
 
-              {/* ALTURA */}
               <div className="flex flex-col gap-1">
                 <label className="font-medium">
                   Altura <span className="text-sm text-gray-500">(ex: 1.80)</span>
@@ -52,7 +48,6 @@ const Imc = () => {
                 />
               </div>
 
-              {/* PESO */}
               <div className="flex flex-col gap-1">
                 <label className="font-medium">
                   Peso <span className="text-sm text-gray-500">(ex: 65)</span>
@@ -65,28 +60,23 @@ const Imc = () => {
                   onChange={({ target }) => setPeso(parseFloat(target.value))}
                 />
               </div>
-
-            {/* RESULTADO */}
+                <button
+                  type="button"
+                  onClick={calcularImc}
+                  className="mt-4 bg-[#03A63C] hover:bg-[#84D904] text-white font-semibold py-3 rounded-lg transition hover:scale-105"
+                >
+                  Calcular
+              </button>
         {mostrarresultado && (
           <div className="w-full max-w-md mt-6">
             <Resultado resultadoImc={resultadoImc.toFixed(2)} />
           </div>
         )}
-              {/* BOTÃO */}
-              <button
-                type="button"
-                onClick={calcularImc}
-                className="mt-4 bg-[#03A63C] hover:bg-[#84D904] text-white font-semibold py-3 rounded-lg transition hover:scale-105"
-              >
-                Calcular
-              </button>
+
+              
 
             </form>
           </div>
-        )}
-
-        
-
       </section>
     </>
   )

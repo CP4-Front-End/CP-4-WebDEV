@@ -1,10 +1,10 @@
 import React from 'react'
-
+import Header from '../components/Header'
 export default function Unidades() {
   return (
     <>
+    <Header/>
     
-    <h1 className='text-xl font-bold text-center mb-6 text-[#261008] lg:text-2xl'>Unidades</h1>
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         
