@@ -14,27 +14,27 @@ export default function Footer() {
         <div className="flex gap-6">
 
           <a href="https://facebook.com" target="blank"
-            className="text-2xl p-3 rounded-md hover:bg-[#F2E205] hover:text-[#261008] transition">
+            className="text-2xl p-3 rounded-full hover:bg-[#F2E205] hover:text-[#261008] transition hover:scale-105">
             <FaFacebook />
           </a>
 
           <a href="https://instagram.com" target="blank"
-            className="text-2xl p-3 rounded-md hover:bg-[#F2E205] hover:text-[#261008] transition">
+            className="text-2xl p-3 rounded-full hover:bg-[#F2E205] hover:text-[#261008] transition hover:scale-105">
             <FaInstagram />
           </a>
 
           <a href="https://twitter.com" target="blank"
-            className="text-2xl p-3 rounded-md hover:bg-[#F2E205] hover:text-[#261008] transition">
+            className="text-2xl p-3 rounded-full hover:bg-[#F2E205] hover:text-[#261008] transition hover:scale-105">
             <FaXTwitter />
           </a>
 
           <a href="https://github.com" target="blank"
-            className="text-2xl p-3 rounded-md hover:bg-[#F2E205] hover:text-[#261008] transition">
+            className="text-2xl p-3 rounded-full hover:bg-[#F2E205] hover:text-[#261008] transition hover:scale-105">
             <FaGithub />
           </a>
 
           <a href="https://youtube.com" target="blank"
-            className="text-2xl p-3 rounded-md hover:bg-[#F2E205] hover:text-[#261008] transition">
+            className="text-2xl p-3 rounded-full hover:bg-[#F2E205] hover:text-[#261008] transition hover:scale-105">
             <FaYoutube />
           </a>
 

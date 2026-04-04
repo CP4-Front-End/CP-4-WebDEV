@@ -27,7 +27,7 @@ const Imc = () => {
 
       <section className="min-h-screen bg-[#D9D9D9] flex flex-col items-center pt-28 px-4">
 
-        <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8 transition hover:shadow-xl">
+        <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8 transition hover:shadow-xl hover:scale-102 transition">
 
             <h2 className="text-2xl font-bold text-[#03A63C] text-center mb-6">
               Calcule seu IMC

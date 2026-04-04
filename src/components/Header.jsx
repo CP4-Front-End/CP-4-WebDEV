@@ -25,7 +25,7 @@ export default function Header() {
               <a href="/"><img
                 alt=""
                 src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
+                className="h-8 w-auto hover:scale-110 transition"
               />
               </a>
             </a>

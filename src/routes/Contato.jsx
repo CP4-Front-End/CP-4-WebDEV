@@ -46,7 +46,7 @@ export default function Contact() {
   return (
     <>
     <Header/>
-    <div className="min-h-screen bg-[#D9D9D1] flex items-center justify-center px-4 py-20">
+    <div className="min-h-screen bg-[#D9D9D9] flex items-center justify-center px-4 py-20">
       <div className="w-full max-w-md bg-[#FFFFFF] rounded-2xl p-6 shadow-lg lg:max-w-2xl lg:p-10">
         <h1 className="text-xl font-bold text-center mb-6 text-[#03A63C] lg:text-2xl">
           Entre em contato conosco!

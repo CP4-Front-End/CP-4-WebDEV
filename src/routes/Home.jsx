@@ -48,7 +48,7 @@ export default function Home() {
 
     <div className="grid md:grid-cols-3 gap-6">
 
-      <div className="bg-[#D9D9D9] p-6 rounded-xl border-4 border-[#84D904]">
+      <div className="bg-[#D9D9D9] p-6 rounded-xl border-4 border-[#84D904] italic">
         <p className="text-[#261008] mb-4">
           "Desde que comecei a treinar aqui, minha rotina mudou completamente. 
           O acompanhamento faz toda diferença."
@@ -57,15 +57,15 @@ export default function Home() {
         <p className="text-sm text-[#261008]">Aluno há 1 ano</p>
       </div>
 
-      <div className="bg-[#D9D9D9] p-6 rounded-xl border-4 border-[#84D904]">
+      <div className="bg-[#D9D9D9] p-6 rounded-xl border-4 border-[#84D904] italic">
         <p className="text-[#261008] mb-4">
-          "Ambiente organizado, profissionais atentos e treinos que realmente dão resultado."
+          "Ambiente organizado, profissionais atentos e treinos que realmente dão resultado no longo prazo."
         </p>
         <h4 className="font-semibold text-[#261008]">Mariana Souza</h4>
         <p className="text-sm text-[#261008]">Aluna há 8 meses</p>
       </div>
 
-      <div className="bg-[#D9D9D9] p-6 rounded-xl border-4 border-[#84D904]">
+      <div className="bg-[#D9D9D9] p-6 rounded-xl border-4 border-[#84D904] italic">
         <p className="text-[#261008] mb-4">
           "Nunca gostei de academia até conhecer esse lugar. Hoje treino com constância e motivação."
         </p>

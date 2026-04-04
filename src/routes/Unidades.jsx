@@ -5,12 +5,12 @@ export default function Unidades() {
     <>
     <Header/>
     
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6">
+    <div className="min-h-screen bg-[#D9D9D9] flex flex-col items-center justify-center p-6">
     <h1 className="text-3xl font-bold pt-10 mb-10 text-center text-[#261008]">Confira qual unidade está mais próxima de você!</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         
         
-        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 border-l-4 border-green-500">
+        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 border-l-4 border-green-500 hover:scale-108 duration-300">
           <h2 className="text-xl font-bold text-gray-800 mb-2">Augusta</h2>
           <p className="text-gray-600">
             Rua Augusta, 1585 - Consolação
@@ -28,7 +28,7 @@ export default function Unidades() {
         </div>
 
         
-        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 border-l-4 border-green-500">
+        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 border-l-4 border-green-500 hover:scale-108 duration-300">
           <h2 className="text-xl font-bold text-gray-800 mb-2">Rua da Consolação II</h2>
           <p className="text-gray-600">
             Rua da Consolação, 3080 - Cerqueira César
@@ -47,7 +47,7 @@ export default function Unidades() {
         </div>
 
         
-        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 border-l-4 border-green-500">
+        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 border-l-4 border-green-500 hover:scale-108 duration-300">
           <h2 className="text-xl font-bold text-gray-800 mb-2">Paulista</h2>
           <p className="text-gray-600">
             Avenida Paulista, 664 - Bela Vista

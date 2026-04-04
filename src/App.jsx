@@ -10,6 +10,7 @@ import Bio from './routes/Bio'
 import Planos from './routes/Planos'
 import Sobre from './routes/Sobre'
 <routes />
+
 const App = () => {
   
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/unidades" element={<Unidades/>}/>
         <Route path="/planos" element={<Planos/>}/>
         <Route path="/sobre" element={<Sobre/>}/>
+        <Route path="/bio" element={<Bio/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter> 
