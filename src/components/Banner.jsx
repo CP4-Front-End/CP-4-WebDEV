@@ -16,9 +16,10 @@ export default function Banner() {
       </div>
       <div className="mx-auto max-w-2xl pt-32 sm:pt-48 lg:pt-26">
         <div className="text-center">
-          <h1 className="text-5xl font-semibold tracking-tight text-balance text-[#03A63C] sm:text-7xl">
-            O que é IMC?
+          <h1 className="text-5xl font-bold tracking-tight text-balance text-[#03A63C] sm:text-7xl">
+            Seja bem vindo(a) a página da Academia Inteligente
           </h1>
+          
           <p className="mt-8 text-lg font-medium text-pretty text-[#261008] sm:text-xl/8">
             O IMC (Índice de Massa Corporal) é uma medida internacional, adotada pela Organização Mundial da Saúde (OMS), utilizada para avaliar se uma pessoa está em seu peso ideal, com sobrepeso ou abaixo do peso, baseando-se na relação entre peso e altura.
           </p>
@@ -28,8 +29,8 @@ export default function Banner() {
             >
               Calcular IMC
             </a>
-            <a target='blank' href="https://www.who.int/pt/about" className="text-sm/6 font-semibold text-[#261008]">
-              Sobre a OMS <span aria-hidden="true">→</span>
+            <a target='blank' href="/planos" className="text-sm/6 font-semibold text-[#261008]">
+              ver planos <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>

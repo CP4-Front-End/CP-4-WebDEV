@@ -6,7 +6,7 @@ export default function Unidades() {
     <Header/>
     
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6">
-    <h1 className="text-3xl font-bold mb-10 text-center text-[#261008]">Confira qual unidade está mais próxima de você!</h1>
+    <h1 className="text-3xl font-bold pt-10 mb-10 text-center text-[#261008]">Confira qual unidade está mais próxima de você!</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         
         

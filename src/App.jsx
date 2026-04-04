@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Unidades from './routes/Unidades'
 import Bio from './routes/Bio'
 import Planos from './routes/Planos'
+import Sobre from './routes/Sobre'
 <routes />
 const App = () => {
   
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/contato" element={<Contato/>}/>
         <Route path="/unidades" element={<Unidades/>}/>
         <Route path="/planos" element={<Planos/>}/>
+        <Route path="/sobre" element={<Sobre/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter> 
