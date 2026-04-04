@@ -24,7 +24,7 @@ export default function Header() {
               <span className="sr-only">Academia Inteligente</span>
               <a href="/"><img
                 alt=""
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                src="../logo.png"
                 className="h-8 w-auto hover:scale-110 transition"
               />
               </a>
@@ -57,7 +57,7 @@ export default function Header() {
                 <span className="sr-only">Academia Inteligente</span>
                 <img
                   alt=""
-                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                  src='../public/logo.png'
                   className="h-8 w-auto"
                 />
               </a>
