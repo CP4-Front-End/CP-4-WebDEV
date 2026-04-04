@@ -7,6 +7,8 @@ const navigation = [
   { name: 'Imc', href: '/imc' },
   { name: 'Bio', href: '/bio' },
   { name: 'Contato', href: '/contato' },
+  { name: 'Planos', href: '/planos' },
+  
 ]
 
 export default function Header() {

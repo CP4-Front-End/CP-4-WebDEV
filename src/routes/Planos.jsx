@@ -1,4 +1,4 @@
-
+import Header from '../components/Header'
 import { CheckIcon } from '@heroicons/react/20/solid'
 
 const tiers = [
@@ -35,6 +35,8 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
+    <>
+    <Header/>
     <div className="relative isolate bg-[#D9D9D9] px-6 py-24 sm:py-32 lg:px-8">
       <div aria-hidden="true" className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl">
         <div
@@ -121,5 +123,6 @@ export default function Example() {
         ))}
       </div>
     </div>
+    </>
   )
 }
