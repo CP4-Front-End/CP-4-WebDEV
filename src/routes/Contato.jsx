@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Header from '../components/Header'
 export default function Contact() {
   const [form, setForm] = useState({
     nome: "",
@@ -44,9 +44,11 @@ export default function Contact() {
   }
 
   return (
-    <div className="min-h-screen bg-[#03A63C] flex items-center justify-center px-4 py-8">
-      <div className="w-full max-w-md bg-[#D9D9D9] rounded-2xl p-6 shadow-lg lg:max-w-2xl lg:p-10">
-        <h1 className="text-xl font-bold text-center mb-6 text-[#261008] lg:text-2xl">
+    <>
+    <Header/>
+    <div className="min-h-screen bg-[#D9D9D1] flex items-center justify-center px-4 py-20">
+      <div className="w-full max-w-md bg-[#FFFFFF] rounded-2xl p-6 shadow-lg lg:max-w-2xl lg:p-10">
+        <h1 className="text-xl font-bold text-center mb-6 text-[#03A63C] lg:text-2xl">
           Entre em contato conosco!
         </h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 lg:grid lg:grid-cols-2 lg:gap-6">
@@ -95,5 +97,6 @@ export default function Contact() {
         </form>
       </div>
     </div>
+    </>
   );
 }

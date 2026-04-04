@@ -5,10 +5,11 @@ export default function Unidades() {
     <>
     <Header/>
     
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-6">
+    <h1 className="text-3xl font-bold mb-10 text-center text-[#261008]">Confira qual unidade está mais próxima de você!</h1>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         
-        {/* Card 1 */}
+        
         <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 border-l-4 border-green-500">
           <h2 className="text-xl font-bold text-gray-800 mb-2">Augusta</h2>
           <p className="text-gray-600">
@@ -26,7 +27,7 @@ export default function Unidades() {
           />      
         </div>
 
-        {/* Card 2 */}
+        
         <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 border-l-4 border-green-500">
           <h2 className="text-xl font-bold text-gray-800 mb-2">Rua da Consolação II</h2>
           <p className="text-gray-600">
@@ -37,15 +38,15 @@ export default function Unidades() {
           </p>
 
           <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2491890128763!2d-46.667308!3d-23.559492199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59373d7a85e1%3A0x8ae921c0060879bd!2sAcademia%20Smart%20Fit%20-%20Rua%20da%20Consola%C3%A7%C3%A3o%20II!5e0!3m2!1spt-BR!2sbr!4v1775240563743!5m2!1spt-BR!2sbr"
-  className="w-full h-[300px] border-0 rounded-xl"
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-  allowFullScreen
-/>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2491890128763!2d-46.667308!3d-23.559492199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59373d7a85e1%3A0x8ae921c0060879bd!2sAcademia%20Smart%20Fit%20-%20Rua%20da%20Consola%C3%A7%C3%A3o%20II!5e0!3m2!1spt-BR!2sbr!4v1775240563743!5m2!1spt-BR!2sbr"
+            className="w-full h-[300px] border-0 rounded-xl"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
         </div>
 
-        {/* Card 3 */}
+        
         <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 border-l-4 border-green-500">
           <h2 className="text-xl font-bold text-gray-800 mb-2">Paulista</h2>
           <p className="text-gray-600">
