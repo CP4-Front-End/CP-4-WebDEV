@@ -182,10 +182,10 @@ export default function Bio() {
         </p>
 
         <Link
-          to="/contato"
+          to="/testeBio"
           className="inline-block mt-8 bg-[#03A63C] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#F2E205] hover:text-[#261008] transition hover:scale-105"
         >
-          Quero fazer minha avaliação
+          Quero fazer (Uso informativo)
         </Link>
       </section>
     </main>
