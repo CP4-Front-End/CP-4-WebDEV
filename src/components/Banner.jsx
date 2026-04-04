@@ -12,11 +12,11 @@ export default function Banner() {
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a href="/imc"
-              className="rounded-md bg-[#F2E205] px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs transition: duration-300 hover:bg-[#03A63C] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+              className="rounded-md bg-[#F2E205] px-3.5 py-2.5 text-sm font-semibold text-[#261008] shadow-xs transition: duration-300 hover:bg-[#03A63C] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 hover:text-white hover:scale-110"
             >
               Calcular IMC
             </a>
-            <a target='blank' href="/planos" className="text-sm/6 font-semibold text-[#261008] hover:text-[#03A63C] transition duration-300 cursor-pointer">
+            <a target='blank' href="/planos" className="text-sm/6 font-semibold text-[#261008] hover:text-[#03A63C] transition duration-300 cursor-pointer hover:scale-110">
               Ver planos <span aria-hidden="true">→</span>
             </a>
           </div>

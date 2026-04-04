@@ -15,22 +15,22 @@ export default function Home() {
 
     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
 
-      <div className="bg-white rounded-xl p-6">
+      <div className="bg-white rounded-xl p-6 hover:scale-105 transition">
         <h3 className="text-3xl font-bold text-[#03A63C]">+1000</h3>
         <p className="text-[#261008] mt-2">Alunos ativos</p>
       </div>
 
-      <div className="bg-white rounded-xl p-6">
+      <div className="bg-white rounded-xl p-6 hover:scale-105 transition">
         <h3 className="text-3xl font-bold text-[#03A63C]">+5 anos</h3>
         <p className="text-[#261008] mt-2">de experiência</p>
       </div>
 
-      <div className="bg-white rounded-xl p-6">
+      <div className="bg-white rounded-xl p-6 hover:scale-105 transition">
         <h3 className="text-3xl font-bold text-[#03A63C]">+300</h3>
         <p className="text-[#261008] mt-2">transformações</p>
       </div>
 
-      <div className="bg-white rounded-xl p-6">
+      <div className="bg-white rounded-xl p-6 hover:scale-105 transition">
         <h3 className="text-3xl font-bold text-[#03A63C]">100%</h3>
         <p className="text-[#261008] mt-2">foco em resultados</p>
       </div>
@@ -48,7 +48,7 @@ export default function Home() {
 
     <div className="grid md:grid-cols-3 gap-6">
 
-      <div className="bg-[#D9D9D9] p-6 rounded-xl border-4 border-[#84D904] italic">
+      <div className="bg-[#D9D9D9] p-6 rounded-xl border-4 border-[#84D904] italic hover:scale-105 transition">
         <p className="text-[#261008] mb-4">
           "Desde que comecei a treinar aqui, minha rotina mudou completamente. 
           O acompanhamento faz toda diferença."
@@ -57,7 +57,7 @@ export default function Home() {
         <p className="text-sm text-[#261008]">Aluno há 1 ano</p>
       </div>
 
-      <div className="bg-[#D9D9D9] p-6 rounded-xl border-4 border-[#84D904] italic">
+      <div className="bg-[#D9D9D9] p-6 rounded-xl border-4 border-[#84D904] italic hover:scale-105 transition">
         <p className="text-[#261008] mb-4">
           "Ambiente organizado, profissionais atentos e treinos que realmente dão resultado no longo prazo."
         </p>
@@ -65,7 +65,7 @@ export default function Home() {
         <p className="text-sm text-[#261008]">Aluna há 8 meses</p>
       </div>
 
-      <div className="bg-[#D9D9D9] p-6 rounded-xl border-4 border-[#84D904] italic">
+      <div className="bg-[#D9D9D9] p-6 rounded-xl border-4 border-[#84D904] italic hover:scale-105 transition">
         <p className="text-[#261008] mb-4">
           "Nunca gostei de academia até conhecer esse lugar. Hoje treino com constância e motivação."
         </p>

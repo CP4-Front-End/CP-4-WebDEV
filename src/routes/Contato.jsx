@@ -53,11 +53,11 @@ export default function Contact() {
         </h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 lg:grid lg:grid-cols-2 lg:gap-6">
           <h3 className="font-bold text-[#261008]">Insira seu nome:</h3>
-          <input type="text" name="nome" placeholder="Nome" value={form.nome} onChange={handleChange} className="p-3 rounded-lg bg-white outline-none border border-gray-300 col-span-2"/>
+          <input type="text" name="nome" placeholder="Nome" value={form.nome} onChange={handleChange} className="p-3 rounded-lg bg-white outline-none border border-gray-300 col-span-2" required/>
             <h3 className="font-bold text-[#261008]">Insira seu sobrenome:</h3>
-          <input type="text" name="sobrenome" placeholder="Sobrenome" value={form.sobrenome} onChange={handleChange} className="p-3 rounded-lg bg-white outline-none border border-gray-300 col-span-2"/>
+          <input type="text" name="sobrenome" placeholder="Sobrenome" value={form.sobrenome} onChange={handleChange} className="p-3 rounded-lg bg-white outline-none border border-gray-300 col-span-2" required/>
             <h3 className="font-bold text-[#261008]">Insira seu email:</h3>
-          <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} className="p-3 rounded-lg bg-white outline-none border border-gray-300 col-span-2"/>
+          <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} className="p-3 rounded-lg bg-white outline-none border border-gray-300 col-span-2 active:border-[#84D904]" required/>
 
           <div className="col-span-2">
             <p className="font-semibold mb-2 text-[#261008]">
