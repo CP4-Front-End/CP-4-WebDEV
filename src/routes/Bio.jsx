@@ -1,193 +1,194 @@
-import React, { useState } from 'react'
+import { Link } from "react-router-dom";
 import Header from '../components/Header'
+import React from "react";
 
-const Bio = () => {
-  const [sexo, setSexo] = useState('homem')
-  const [idade, setIdade] = useState(0)
-  const [peito, setPeito] = useState(0)
-  const [abdomen, setAbdomen] = useState(0)
-  const [coxa, setCoxa] = useState(0)
-  const [triceps, setTriceps] = useState(0)
-  const [suprailiaca, setSuprailiaca] = useState(0)
-  const [resultado, setResultado] = useState(0)
-  const [mostrarResultado, setMostrarResultado] = useState(false)
-
-  const calcularGordura = () => {
-    let somaDobras = 0
-    let densidadeCorporal = 0
-
-    if (sexo === 'homem') {
-      if (peito <= 0 || abdomen <= 0 || coxa <= 0) {
-        alert('Preencha todas as dobras cutâneas')
-        return
-      }
-      somaDobras = peito + abdomen + coxa
-      densidadeCorporal = 1.10938 - (0.0008267 * somaDobras) + (0.0000016 * Math.pow(somaDobras, 2)) - (0.0002574 * idade)
-    } else {
-      if (triceps <= 0 || suprailiaca <= 0 || coxa <= 0) {
-        alert('Preencha todas as dobras cutâneas')
-        return
-      }
-      somaDobras = triceps + suprailiaca + coxa
-      densidadeCorporal = 1.0994921 - (0.0009929 * somaDobras) + (0.0000023 * Math.pow(somaDobras, 2)) - (0.0001392 * idade)
-    }
-
-    if (densidadeCorporal > 0) {
-      const percentualGordura = (495 / densidadeCorporal) - 450
-      setResultado(percentualGordura)
-      setMostrarResultado(true)
-    }
-  }
-
-  const getCategoria = (percentual) => {
-    if (sexo === 'homem') {
-      if (percentual < 6) return 'Atletico'
-      if (percentual < 14) return 'Fitness'
-      if (percentual < 18) return 'Normal'
-      if (percentual < 25) return 'Sobrepeso'
-      return 'Obeso'
-    } else {
-      if (percentual < 14) return 'Atletico'
-      if (percentual < 21) return 'Fitness'
-      if (percentual < 25) return 'Normal'
-      if (percentual < 32) return 'Sobrepeso'
-      return 'Obeso'
-    }
-  }
-
+export default function Bio() {
   return (
     <>
-      <Header />
-      <section className="min-h-screen bg-[#D9D9D9] flex flex-col items-center pt-28 px-4">
-        <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8 transition hover:shadow-xl">
-          <h2 className="text-2xl font-bold text-[#03A63C] text-center mb-6">
-            Calcule seu Percentual de Gordura (3 Dobras)
-          </h2>
+    <Header/>
+    <main className="bg-[#D9D9D9] text-[#261008] min-h-screen">
+      <section className="max-w-6xl mx-auto px-6 py-20">
+        <div className="max-w-3xl mx-auto text-center">
 
-          <div className="flex gap-4 mb-6">
-            <button
-              type="button"
-              onClick={() => { setSexo('homem'); setMostrarResultado(false) }}
-              className={`flex-1 py-2 rounded-lg font-medium transition ${
-                sexo === 'homem' 
-                  ? 'bg-[#03A63C] text-white' 
-                  : 'bg-gray-200 text-gray-700'
-              }`}
+          <h1 className="text-4xl sm:text-5xl font-bold text-[#03A63C] leading-tight">
+            Entenda seu corpo além do peso
+          </h1>
+
+          <p className="mt-6 text-lg leading-8">
+            A bioimpedância é uma avaliação que mostra dados importantes da sua
+            composição corporal, ajudando a criar estratégias mais assertivas
+            para emagrecimento, ganho de massa muscular e melhora do
+            desempenho.
+          </p>
+
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contato"
+              className="bg-[#F2E205] px-6 py-3 rounded-xl font-semibold hover:bg-[#03A63C] hover:text-white transition hover:opacity-90 hover:scale-105"
             >
-              Homem
-            </button>
-            <button
-              type="button"
-              onClick={() => { setSexo('mulher'); setMostrarResultado(false) }}
-              className={`flex-1 py-2 rounded-lg font-medium transition ${
-                sexo === 'mulher' 
-                  ? 'bg-[#03A63C] text-white' 
-                  : 'bg-gray-200 text-gray-700'
-              }`}
+              Agendar avaliação
+            </Link>
+
+            <Link
+              to="/planos"
+              className="border border-[#03A63C] text-[#03A63C] px-6 py-3 rounded-xl font-semibold hover:bg-[#03A63C] hover:text-white transition hover:scale-105"
             >
-              Mulher
-            </button>
+              Ver planos
+            </Link>
           </div>
-
-          <form className="flex flex-col gap-5 text-[#261008]">
-            <div className="flex flex-col gap-1">
-              <label className="font-medium">Idade <span className="text-sm text-gray-500">(anos)</span></label>
-              <input
-                type="number"
-                placeholder="Digite sua idade"
-                className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#03A63C]"
-                onChange={({ target }) => setIdade(parseFloat(target.value))}
-              />
-            </div>
-
-            {sexo === 'homem' ? (
-              <>
-                <div className="flex flex-col gap-1">
-                  <label className="font-medium">Peito <span className="text-sm text-gray-500">(mm)</span></label>
-                  <input
-                    type="number"
-                    step="0.1"
-                    placeholder="Digite a dobra do peito"
-                    className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#03A63C]"
-                    onChange={({ target }) => setPeito(parseFloat(target.value))}
-                  />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <label className="font-medium">Abdômen <span className="text-sm text-gray-500">(mm)</span></label>
-                  <input
-                    type="number"
-                    step="0.1"
-                    placeholder="Digite a dobra do abdômen"
-                    className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#03A63C]"
-                    onChange={({ target }) => setAbdomen(parseFloat(target.value))}
-                  />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <label className="font-medium">Coxa <span className="text-sm text-gray-500">(mm)</span></label>
-                  <input
-                    type="number"
-                    step="0.1"
-                    placeholder="Digite a dobra da coxa"
-                    className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#03A63C]"
-                    onChange={({ target }) => setCoxa(parseFloat(target.value))}
-                  />
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="flex flex-col gap-1">
-                  <label className="font-medium">Tríceps <span className="text-sm text-gray-500">(mm)</span></label>
-                  <input
-                    type="number"
-                    step="0.1"
-                    placeholder="Digite a dobra do tríceps"
-                    className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#03A63C]"
-                    onChange={({ target }) => setTriceps(parseFloat(target.value))}
-                  />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <label className="font-medium">Supra-ilíaca <span className="text-sm text-gray-500">(mm)</span></label>
-                  <input
-                    type="number"
-                    step="0.1"
-                    placeholder="Digite a dobra supra-ilíaca"
-                    className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#03A63C]"
-                    onChange={({ target }) => setSuprailiaca(parseFloat(target.value))}
-                  />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <label className="font-medium">Coxa <span className="text-sm text-gray-500">(mm)</span></label>
-                  <input
-                    type="number"
-                    step="0.1"
-                    placeholder="Digite a dobra da coxa"
-                    className="border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#03A63C]"
-                    onChange={({ target }) => setCoxa(parseFloat(target.value))}
-                  />
-                </div>
-              </>
-            )}
-
-            <button
-              type="button"
-              onClick={calcularGordura}
-              className="mt-4 bg-[#03A63C] hover:bg-[#84D904] text-white font-semibold py-3 rounded-lg transition hover:scale-105"
-            >
-              Calcular
-            </button>
-
-            {mostrarResultado && (
-              <div className="mt-6 p-4 bg-[#03A63C] text-white rounded-lg text-center">
-                <p className="text-lg font-bold">Percentual de Gordura:</p>
-                <p className="text-3xl font-bold">{resultado.toFixed(1)}%</p>
-                <p className="text-lg mt-2">Categoria: {getCategoria(resultado)}</p>
-              </div>
-            )}
-          </form>
         </div>
       </section>
-    </>
-  )
-}
 
-export default Bio
+      <section className="max-w-6xl mx-auto px-6 pb-20">
+        <h2 className="text-3xl font-bold text-center mb-10">
+          O que a avaliação mostra
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#03A63C] hover:scale-105 transition">
+            <h3 className="text-[#03A63C] font-bold text-xl mb-3">
+              Gordura corporal
+            </h3>
+            <p className="leading-7">
+              Descubra seu percentual de gordura e acompanhe sua evolução com
+              mais clareza.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#03A63C] hover:scale-105 transition">
+            <h3 className="text-[#03A63C] font-bold text-xl mb-3">
+              Massa muscular
+           </h3>
+            <p className="leading-7">
+              Entenda como está sua massa magra e acompanhe seu desenvolvimento
+              físico.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#03A63C] hover:scale-105 transition">
+            <h3 className="text-[#03A63C] font-bold text-xl mb-3">
+              Água corporal
+            </h3>
+            <p className="leading-7">
+              Veja como a hidratação do seu corpo pode impactar seu rendimento e
+              saúde.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#03A63C] hover:scale-105 transition">
+            <h3 className="text-[#03A63C] font-bold text-xl mb-3">
+              Metabolismo basal
+            </h3>
+            <p className="leading-7">
+              Saiba quantas calorias seu corpo gasta em repouso e entenda melhor
+              suas necessidades.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#D9D9D9] py-20">
+        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10">
+          <div className="bg-[#D9D9D9] rounded-2xl p-8 border-4 border-[#84D904] hover:scale-105 transition">
+            <h2 className="text-3xl font-bold mb-6 text-[#03A63C]">
+              Como funciona
+            </h2>
+
+            <div className="space-y-4">
+              <div className="flex gap-4 items-start">
+                <div className="w-8 h-8 rounded-full bg-[#84D904] text-white flex items-center justify-center font-bold shrink-0">
+                  1
+                </div>
+                <p className="leading-7">
+                  Agende sua avaliação com nossa equipe especializada.
+                </p>
+              </div>
+
+              <div className="flex gap-4 items-start">
+                <div className="w-8 h-8 rounded-full bg-[#84D904] text-white flex items-center justify-center font-bold shrink-0">
+                  2
+                </div>
+                <p className="leading-7">
+                  Realize o exame de bioimpedância em poucos minutos.
+                </p>
+              </div>
+
+              <div className="flex gap-4 items-start">
+                <div className="w-8 h-8 rounded-full bg-[#84D904] text-white flex items-center justify-center font-bold shrink-0">
+                  3
+                </div>
+                <p className="leading-7">
+                  Receba a leitura dos dados corporais com orientação.
+                </p>
+              </div>
+
+              <div className="flex gap-4 items-start">
+                <div className="w-8 h-8 rounded-full bg-[#84D904] text-white flex items-center justify-center font-bold shrink-0">
+                  4
+                </div>
+                <p className="leading-7">
+                  Monte um plano mais eficiente com base nos seus resultados.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-[#D9D9D9] rounded-2xl p-8 border-4 border-[#84D904] hover:scale-105 transition">
+            <h2 className="text-3xl font-bold mb-6 text-[#03A63C]">
+              Como se preparar
+            </h2>
+
+            <div className="space-y-4">
+              <div className="flex gap-3 items-start">
+                <span className="text-[#03A63C] font-bold">✓</span>
+                <p className="leading-7">
+                  Evite refeições pesadas antes da avaliação.
+                </p>
+              </div>
+
+              <div className="flex gap-3 items-start">
+                <span className="text-[#03A63C] font-bold">✓</span>
+                <p className="leading-7">
+                  Mantenha-se hidratado(a) ao longo do dia.
+                </p>
+              </div>
+
+              <div className="flex gap-3 items-start">
+                <span className="text-[#03A63C] font-bold">✓</span>
+                <p className="leading-7">
+                  Não faça treino intenso imediatamente antes do exame.
+                </p>
+              </div>
+
+              <div className="flex gap-3 items-start">
+                <span className="text-[#03A63C] font-bold">✓</span>
+                <p className="leading-7">
+                  Use roupas leves para facilitar a avaliação.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-4xl mx-auto px-6 py-20 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#03A63C]">
+          Resultados melhores começam com dados reais
+        </h2>
+
+        <p className="mt-6 text-lg leading-8">
+          Com a bioimpedância, você acompanha sua evolução de forma muito mais
+          inteligente do que olhando apenas para o peso na balança.
+        </p>
+
+        <Link
+          to="/testeBio"
+          className="inline-block mt-8 bg-[#03A63C] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#F2E205] hover:text-[#261008] transition hover:scale-105"
+        >
+          Quero fazer (Uso informativo)
+        </Link>
+      </section>
+    </main>
+    </>
+  );
+}

@@ -8,6 +8,7 @@ const navigation = [
   { name: 'Bio', href: '/bio' },
   { name: 'Contato', href: '/contato' },
   { name: 'Planos', href: '/planos' },
+  { name: 'Sobre', href: '/sobre' }
   
 ]
 
@@ -17,14 +18,14 @@ export default function Header() {
   return (
     <div className="bg-[#D9D9D9]">
       <header className="absolute inset-x-0 top-0 z-50">
-        <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
-          <div className="flex lg:flex-1">
+        <nav aria-label="Global" className="flex items-center p-6 lg:px-8">
+          <div className="flex flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Academia Inteligente</span>
               <a href="/"><img
                 alt=""
                 src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-8 w-auto"
+                className="h-8 w-auto hover:scale-110 transition"
               />
               </a>
             </a>
@@ -46,21 +47,17 @@ export default function Header() {
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm/6 font-semibold text-white">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto p-6 sm:max-w-sm bg-[#D9D9D9] sm:ring-1 sm:ring-gray-100/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+              <a href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Academia Inteligente</span>
                 <img
                   alt=""
-                  src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
                   className="h-8 w-auto"
                 />
               </a>
@@ -85,14 +82,6 @@ export default function Header() {
                       {item.name}
                     </a>
                   ))}
-                </div>
-                <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 inline-block bg-[#F2E205] border border-[#F2E205] block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
-                  >
-                    Log in
-                  </a>
                 </div>
               </div>
             </div>

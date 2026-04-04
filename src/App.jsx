@@ -8,7 +8,10 @@ import Footer from './components/Footer';
 import Unidades from './routes/Unidades'
 import Bio from './routes/Bio'
 import Planos from './routes/Planos'
+import Sobre from './routes/Sobre'
+import TesteBio from './routes/TesteBio'
 <routes />
+
 const App = () => {
   
   return (
@@ -21,6 +24,9 @@ const App = () => {
         <Route path="/contato" element={<Contato/>}/>
         <Route path="/unidades" element={<Unidades/>}/>
         <Route path="/planos" element={<Planos/>}/>
+        <Route path="/sobre" element={<Sobre/>}/>
+        <Route path="/bio" element={<Bio/>}/>
+        <Route path="testeBio" element={<TesteBio/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter> 

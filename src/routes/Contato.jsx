@@ -46,18 +46,18 @@ export default function Contact() {
   return (
     <>
     <Header/>
-    <div className="min-h-screen bg-[#D9D9D1] flex items-center justify-center px-4 py-20">
+    <div className="min-h-screen bg-[#D9D9D9] flex items-center justify-center px-4 py-20">
       <div className="w-full max-w-md bg-[#FFFFFF] rounded-2xl p-6 shadow-lg lg:max-w-2xl lg:p-10">
         <h1 className="text-xl font-bold text-center mb-6 text-[#03A63C] lg:text-2xl">
           Entre em contato conosco!
         </h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 lg:grid lg:grid-cols-2 lg:gap-6">
           <h3 className="font-bold text-[#261008]">Insira seu nome:</h3>
-          <input type="text" name="nome" placeholder="Nome" value={form.nome} onChange={handleChange} className="p-3 rounded-lg bg-white outline-none border border-gray-300 col-span-2"/>
+          <input type="text" name="nome" placeholder="Nome" value={form.nome} onChange={handleChange} className="p-3 rounded-lg bg-white outline-none border border-gray-300 col-span-2" required/>
             <h3 className="font-bold text-[#261008]">Insira seu sobrenome:</h3>
-          <input type="text" name="sobrenome" placeholder="Sobrenome" value={form.sobrenome} onChange={handleChange} className="p-3 rounded-lg bg-white outline-none border border-gray-300 col-span-2"/>
+          <input type="text" name="sobrenome" placeholder="Sobrenome" value={form.sobrenome} onChange={handleChange} className="p-3 rounded-lg bg-white outline-none border border-gray-300 col-span-2" required/>
             <h3 className="font-bold text-[#261008]">Insira seu email:</h3>
-          <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} className="p-3 rounded-lg bg-white outline-none border border-gray-300 col-span-2"/>
+          <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} className="p-3 rounded-lg bg-white outline-none border border-gray-300 col-span-2 active:border-[#84D904]" required/>
 
           <div className="col-span-2">
             <p className="font-semibold mb-2 text-[#261008]">

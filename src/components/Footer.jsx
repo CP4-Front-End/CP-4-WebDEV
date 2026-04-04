@@ -7,29 +7,43 @@ export default function Footer() {
     <footer className="bg-[#03A63C] text-[#261008]">
       <div className="max-w-6xl mx-auto py-12 px-6 flex flex-col items-center gap-6">
 
-        
-        <nav className="flex flex-wrap justify-center gap-6 text-sm">
-          <a href="#" className="hover:text-[#F2E205]">About</a>
-          <a href="#" className="hover:text-[#F2E205]">Blog</a>
-          <a href="#" className="hover:text-[#F2E205]">Jobs</a>
-          <a href="#" className="hover:text-[#F2E205]">Press</a>
-          <a href="#" className="hover:text-[#F2E205]">Accessibility</a>
-          <a href="#" className="hover:text-[#F2E205]">Partners</a>
-        </nav>
+        <p className="font-semibold text-lg">
+          Confira nossas redes sociais!
+        </p>
 
-        
-        <div className="flex gap-6 text-lg">
-          <FaFacebook className="hover:text-[#F2E205]"/>
-          <FaInstagram className="hover:text-[#F2E205] cursor-pointer" />
-          <FaXTwitter className="hover:text-[#F2E205] cursor-pointer" />
-          <FaGithub className="hover:text-[#F2E205] cursor-pointer" />
-          <FaYoutube className="hover:text-[#F2E205] cursor-pointer" />
+        <div className="flex gap-6">
+
+          <a href="https://facebook.com" target="blank"
+            className="text-2xl p-3 rounded-full hover:bg-[#F2E205] hover:text-[#261008] transition hover:scale-105">
+            <FaFacebook />
+          </a>
+
+          <a href="https://instagram.com" target="blank"
+            className="text-2xl p-3 rounded-full hover:bg-[#F2E205] hover:text-[#261008] transition hover:scale-105">
+            <FaInstagram />
+          </a>
+
+          <a href="https://twitter.com" target="blank"
+            className="text-2xl p-3 rounded-full hover:bg-[#F2E205] hover:text-[#261008] transition hover:scale-105">
+            <FaXTwitter />
+          </a>
+
+          <a href="https://github.com" target="blank"
+            className="text-2xl p-3 rounded-full hover:bg-[#F2E205] hover:text-[#261008] transition hover:scale-105">
+            <FaGithub />
+          </a>
+
+          <a href="https://youtube.com" target="blank"
+            className="text-2xl p-3 rounded-full hover:bg-[#F2E205] hover:text-[#261008] transition hover:scale-105">
+            <FaYoutube />
+          </a>
+
         </div>
 
-       
-        <p className="text-xs text-[#261008] text-center">
+        <p className="text-xs text-center">
           © 2024 Academia Inteligente, Inc. Todos os direitos reservados.
         </p>
+
       </div>
     </footer>
   );
