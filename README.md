@@ -15,8 +15,6 @@ O objetivo foi construir uma interface funcional e visualmente consistente, simu
 - **João Sarracine**
 - **João Gonzales**
 
-> Substitua os nomes acima pelos integrantes do grupo antes da entrega final.
-
 ---
 
 ## Objetivo
