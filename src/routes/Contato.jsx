@@ -172,7 +172,7 @@ export default function Contact() {
               </svg>
             </div>
             <p className="text-xs text-gray-500">Email</p>
-            <p className="text-sm font-bold text-white">contato@academia.com</p>
+            <p className="text-sm font-bold text-white">contato@GymSmart.com</p>
           </div>
           <div className="bg-gray-900/60 rounded-2xl p-4 shadow-md border border-gray-800">
             <div className="w-10 h-10 mx-auto bg-orange-600 rounded-full flex items-center justify-center mb-2">
