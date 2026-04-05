@@ -12,13 +12,13 @@ const getClassificacao = (resultadoImc) => {
     return {
       titulo: "Peso normal",
       descricao: "Seu IMC está entre 18.5 e 24.9",
-      cor: "text-[#03A63C]"
+      cor: "text-orange-500"
     }
   } else if (resultado < 30) {
     return {
       titulo: "Pré-obesidade",
       descricao: "Seu IMC está entre 25 e 29.9",
-      cor: "text-orange-500"
+      cor: "text-orange-400"
     }
   } else if (resultado < 35) {
     return {
@@ -46,42 +46,39 @@ const Resultado = ({ resultadoImc }) => {
   const info = getClassificacao(resultadoImc)
 
   return (
-    <div className="max-w-md mx-auto mt-10 bg-white rounded-2xl shadow-lg p-6">
+    <div className="max-w-md mx-auto mt-10 bg-gray-900 rounded-2xl shadow-2xl p-6 border border-gray-800">
 
-      {/* RESULTADO */}
       <div className="text-center mb-6">
-        <h2 className="text-lg text-[#261008] font-medium">
+        <h2 className="text-lg text-gray-400 font-medium">
           Seu IMC é
         </h2>
 
-        <span className="text-4xl font-bold text-[#03A63C]">
+        <span className="text-4xl font-bold text-orange-500">
           {resultadoImc}
         </span>
       </div>
 
-      {/* CARD CLASSIFICAÇÃO */}
-      <div className="bg-[#D9D9D9] rounded-xl p-4 text-center">
+      <div className="bg-gray-800 rounded-xl p-4 text-center border border-gray-700">
         <h3 className={`text-xl font-semibold ${info.cor}`}>
           {info.titulo}
         </h3>
-        <p className="text-sm text-[#261008] mt-2">
+        <p className="text-sm text-gray-400 mt-2">
           {info.descricao}
         </p>
       </div>
 
-      {/* TABELA */}
       <div className="mt-6">
-        <table className="w-full text-sm text-left border border-[#D9D9D9] rounded-lg overflow-hidden">
-          <thead className="bg-[#261008] text-white">
+        <table className="w-full text-sm text-left border border-gray-700 rounded-lg overflow-hidden">
+          <thead className="bg-orange-500 text-black font-bold">
             <tr>
               <th className="p-3">Classificação</th>
               <th className="p-3">IMC</th>
             </tr>
           </thead>
-          <tbody>
-            <tr className="border-t">
-              <td className="p-3 font-semibold">{info.titulo}</td>
-              <td className="p-3">{info.descricao}</td>
+          <tbody className="bg-gray-800">
+            <tr className="border-t border-gray-700">
+              <td className="p-3 font-semibold text-white">{info.titulo}</td>
+              <td className="p-3 text-gray-400">{info.descricao}</td>
             </tr>
           </tbody>
         </table>
