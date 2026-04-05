@@ -172,7 +172,7 @@ export default function Contact() {
               </svg>
             </div>
             <p className="text-xs text-gray-500">Email</p>
-            <p className="text-sm font-bold text-white">contato@academia.com</p>
+            <p className="text-sm font-bold text-white">GymSmart@gm.com</p>
           </div>
           <div className="bg-gray-900/60 rounded-2xl p-4 shadow-md border border-gray-800">
             <div className="w-10 h-10 mx-auto bg-orange-600 rounded-full flex items-center justify-center mb-2">
@@ -181,7 +181,7 @@ export default function Contact() {
               </svg>
             </div>
             <p className="text-xs text-gray-500">Telefone</p>
-            <p className="text-sm font-bold text-white">(11) 99999-9999</p>
+            <p className="text-sm font-bold text-white">(11) 98929-6378</p>
           </div>
           <div className="bg-gray-900/60 rounded-2xl p-4 shadow-md border border-gray-800">
             <div className="w-10 h-10 mx-auto bg-orange-400 rounded-full flex items-center justify-center mb-2">
@@ -191,7 +191,7 @@ export default function Contact() {
               </svg>
             </div>
             <p className="text-xs text-gray-500">Endereco</p>
-            <p className="text-sm font-bold text-white">Rua Example, 123</p>
+            <p className="text-sm font-bold text-white">Rua Augusta, 132</p>
           </div>
         </div>
       </div>
