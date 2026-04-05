@@ -6,32 +6,32 @@ export default function Bio() {
   return (
     <>
     <Header/>
-    <main className="bg-[#D9D9D9] text-[#261008] min-h-screen">
+    <main className="bg-black text-white min-h-screen">
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="max-w-3xl mx-auto text-center">
 
-          <h1 className="text-4xl sm:text-5xl font-bold text-[#03A63C] leading-tight">
-            Entenda seu corpo além do peso
+          <h1 className="text-4xl sm:text-5xl font-bold text-orange-500 leading-tight">
+            Entenda seu corpo alem do peso
           </h1>
 
-          <p className="mt-6 text-lg leading-8">
-            A bioimpedância é uma avaliação que mostra dados importantes da sua
-            composição corporal, ajudando a criar estratégias mais assertivas
+          <p className="mt-6 text-lg leading-8 text-gray-400">
+            A bioimpedancia e uma avaliacao que mostra dados importantes da sua
+            composicao corporal, ajudando a criar estrategias mais assertivas
             para emagrecimento, ganho de massa muscular e melhora do
             desempenho.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contato"
-              className="bg-[#F2E205] px-6 py-3 rounded-xl font-semibold hover:bg-[#03A63C] hover:text-white transition hover:opacity-90 hover:scale-105"
+              to="/testeBio"
+              className="bg-orange-500 px-6 py-3 rounded-xl font-semibold text-black hover:bg-orange-600 transition hover:scale-105"
             >
-              Agendar avaliação
+              Fazer teste 3 dobras
             </Link>
 
             <Link
               to="/planos"
-              className="border border-[#03A63C] text-[#03A63C] px-6 py-3 rounded-xl font-semibold hover:bg-[#03A63C] hover:text-white transition hover:scale-105"
+              className="border border-orange-500 text-orange-500 px-6 py-3 rounded-xl font-semibold hover:bg-orange-500 hover:text-black transition hover:scale-105"
             >
               Ver planos
             </Link>
@@ -40,46 +40,46 @@ export default function Bio() {
       </section>
 
       <section className="max-w-6xl mx-auto px-6 pb-20">
-        <h2 className="text-3xl font-bold text-center mb-10">
-          O que a avaliação mostra
+        <h2 className="text-3xl font-bold text-white text-center mb-10">
+          O que a avaliacao mostra
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#03A63C] hover:scale-105 transition">
-            <h3 className="text-[#03A63C] font-bold text-xl mb-3">
+          <div className="bg-gray-900 rounded-2xl p-6 shadow-sm border border-gray-800 hover:border-orange-500 hover:scale-105 transition">
+            <h3 className="text-orange-500 font-bold text-xl mb-3">
               Gordura corporal
             </h3>
-            <p className="leading-7">
-              Descubra seu percentual de gordura e acompanhe sua evolução com
+            <p className="leading-7 text-gray-400">
+              Descubra seu percentual de gordura e acompanhe sua evolucao com
               mais clareza.
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#03A63C] hover:scale-105 transition">
-            <h3 className="text-[#03A63C] font-bold text-xl mb-3">
+          <div className="bg-gray-900 rounded-2xl p-6 shadow-sm border border-gray-800 hover:border-orange-500 hover:scale-105 transition">
+            <h3 className="text-orange-500 font-bold text-xl mb-3">
               Massa muscular
             </h3>
-            <p className="leading-7">
-              Entenda como está sua massa magra e acompanhe seu desenvolvimento
-              físico.
+            <p className="leading-7 text-gray-400">
+              Entenda como esta sua massa magra e acompanhe seu desenvolvimento
+              fisico.
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#03A63C] hover:scale-105 transition">
-            <h3 className="text-[#03A63C] font-bold text-xl mb-3">
-              Água corporal
+          <div className="bg-gray-900 rounded-2xl p-6 shadow-sm border border-gray-800 hover:border-orange-500 hover:scale-105 transition">
+            <h3 className="text-orange-500 font-bold text-xl mb-3">
+              Agua corporal
             </h3>
-            <p className="leading-7">
-              Veja como a hidratação do seu corpo pode impactar seu rendimento e
-              saúde.
+            <p className="leading-7 text-gray-400">
+              Veja como a hidratacao do seu corpo pode impactar seu rendimento e
+              saude.
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-sm border border-[#03A63C] hover:scale-105 transition">
-            <h3 className="text-[#03A63C] font-bold text-xl mb-3">
+          <div className="bg-gray-900 rounded-2xl p-6 shadow-sm border border-gray-800 hover:border-orange-500 hover:scale-105 transition">
+            <h3 className="text-orange-500 font-bold text-xl mb-3">
               Metabolismo basal
             </h3>
-            <p className="leading-7">
+            <p className="leading-7 text-gray-400">
               Saiba quantas calorias seu corpo gasta em repouso e entenda melhor
               suas necessidades.
             </p>
@@ -87,83 +87,83 @@ export default function Bio() {
         </div>
       </section>
 
-      <section className="bg-[#D9D9D9] py-20">
+      <section className="bg-gray-900 py-20 border-t border-gray-800">
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10">
-          <div className="bg-[#D9D9D9] rounded-2xl p-8 border-4 border-[#84D904] hover:scale-105 transition">
-            <h2 className="text-3xl font-bold mb-6 text-[#03A63C]">
+          <div className="bg-black rounded-2xl p-8 border-2 border-orange-500/50 hover:border-orange-500 hover:scale-105 transition">
+            <h2 className="text-3xl font-bold mb-6 text-orange-500">
               Como funciona
             </h2>
 
             <div className="space-y-4">
               <div className="flex gap-4 items-start">
-                <div className="w-8 h-8 rounded-full bg-[#84D904] text-white flex items-center justify-center font-bold shrink-0">
+                <div className="w-8 h-8 rounded-full bg-orange-500 text-black flex items-center justify-center font-bold shrink-0">
                   1
                 </div>
-                <p className="leading-7">
-                  Agende sua avaliação com nossa equipe especializada.
+                <p className="leading-7 text-gray-300">
+                  Agende sua avaliacao com nossa equipe especializada.
                 </p>
               </div>
 
               <div className="flex gap-4 items-start">
-                <div className="w-8 h-8 rounded-full bg-[#84D904] text-white flex items-center justify-center font-bold shrink-0">
+                <div className="w-8 h-8 rounded-full bg-orange-500 text-black flex items-center justify-center font-bold shrink-0">
                   2
                 </div>
-                <p className="leading-7">
-                  Realize o exame de bioimpedância em poucos minutos.
+                <p className="leading-7 text-gray-300">
+                  Realize o exame de bioimpedancia em poucos minutos.
                 </p>
               </div>
 
               <div className="flex gap-4 items-start">
-                <div className="w-8 h-8 rounded-full bg-[#84D904] text-white flex items-center justify-center font-bold shrink-0">
+                <div className="w-8 h-8 rounded-full bg-orange-500 text-black flex items-center justify-center font-bold shrink-0">
                   3
                 </div>
-                <p className="leading-7">
-                  Receba a leitura dos dados corporais com orientação.
+                <p className="leading-7 text-gray-300">
+                  Receba a leitura dos dados corporais com orientacao.
                 </p>
               </div>
 
               <div className="flex gap-4 items-start">
-                <div className="w-8 h-8 rounded-full bg-[#84D904] text-white flex items-center justify-center font-bold shrink-0">
+                <div className="w-8 h-8 rounded-full bg-orange-500 text-black flex items-center justify-center font-bold shrink-0">
                   4
                 </div>
-                <p className="leading-7">
+                <p className="leading-7 text-gray-300">
                   Monte um plano mais eficiente com base nos seus resultados.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="bg-[#D9D9D9] rounded-2xl p-8 border-4 border-[#84D904] hover:scale-105 transition">
-            <h2 className="text-3xl font-bold mb-6 text-[#03A63C]">
+          <div className="bg-black rounded-2xl p-8 border-2 border-orange-500/50 hover:border-orange-500 hover:scale-105 transition">
+            <h2 className="text-3xl font-bold mb-6 text-orange-500">
               Como se preparar
             </h2>
 
             <div className="space-y-4">
               <div className="flex gap-3 items-start">
-                <span className="text-[#03A63C] font-bold">✓</span>
-                <p className="leading-7">
-                  Evite refeições pesadas antes da avaliação.
+                <span className="text-orange-500 font-bold">✓</span>
+                <p className="leading-7 text-gray-300">
+                  Evite refeicoes pesadas antes da avaliacao.
                 </p>
               </div>
 
               <div className="flex gap-3 items-start">
-                <span className="text-[#03A63C] font-bold">✓</span>
-                <p className="leading-7">
+                <span className="text-orange-500 font-bold">✓</span>
+                <p className="leading-7 text-gray-300">
                   Mantenha-se hidratado(a) ao longo do dia.
                 </p>
               </div>
 
               <div className="flex gap-3 items-start">
-                <span className="text-[#03A63C] font-bold">✓</span>
-                <p className="leading-7">
-                  Não faça treino intenso imediatamente antes do exame.
+                <span className="text-orange-500 font-bold">✓</span>
+                <p className="leading-7 text-gray-300">
+                  Nao faca treino intenso imediatamente antes do exame.
                 </p>
               </div>
 
               <div className="flex gap-3 items-start">
-                <span className="text-[#03A63C] font-bold">✓</span>
-                <p className="leading-7">
-                  Use roupas leves para facilitar a avaliação.
+                <span className="text-orange-500 font-bold">✓</span>
+                <p className="leading-7 text-gray-300">
+                  Use roupas leves para facilitar a avaliacao.
                 </p>
               </div>
             </div>
@@ -172,20 +172,20 @@ export default function Bio() {
       </section>
 
       <section className="max-w-4xl mx-auto px-6 py-20 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#03A63C]">
-          Resultados melhores começam com dados reais
+        <h2 className="text-3xl sm:text-4xl font-bold text-orange-500">
+          Resultados melhores comecam com dados reais
         </h2>
 
-        <p className="mt-6 text-lg leading-8">
-          Com a bioimpedância, você acompanha sua evolução de forma muito mais
-          inteligente do que olhando apenas para o peso na balança.
+        <p className="mt-6 text-lg leading-8 text-gray-400">
+          Com a bioimpedancia, voce acompanha sua evolucao de forma muito mais
+          inteligente do que olhando apenas para o peso na balanca.
         </p>
 
         <Link
           to="/testeBio"
-          className="inline-block mt-8 bg-[#03A63C] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#F2E205] hover:text-[#261008] transition hover:scale-105"
+          className="inline-block mt-8 bg-orange-500 text-black px-8 py-4 rounded-xl font-semibold hover:bg-orange-600 hover:scale-105 transition"
         >
-          Quero fazer (Uso informativo)
+          Fazer teste das 3 dobras
         </Link>
       </section>
     </main>
