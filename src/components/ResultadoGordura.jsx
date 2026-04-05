@@ -1,6 +1,34 @@
 import React from 'react'
 
-export default function ResultadoGordura({ resultado, sexo }) {
+const calcularPercentual = (dados, sexo) => {
+  const { idade, peito, abdomen, coxa, triceps, suprailiaca } = dados
+  
+  const idadeNum = parseFloat(idade)
+  let somaDobras = 0
+  let densidadeCorporal = 0
+
+  if (sexo === 'homem') {
+    const peitoNum = parseFloat(peito)
+    const abdomenNum = parseFloat(abdomen)
+    const coxaNum = parseFloat(coxa)
+
+    somaDobras = peitoNum + abdomenNum + coxaNum
+    densidadeCorporal = 1.10938 - (0.0008267 * somaDobras) + (0.0000016 * Math.pow(somaDobras, 2)) - (0.0002574 * idadeNum)
+  } else {
+    const tricepsNum = parseFloat(triceps)
+    const suprailiacaNum = parseFloat(suprailiaca)
+    const coxaNum = parseFloat(coxa)
+
+    somaDobras = tricepsNum + suprailiacaNum + coxaNum
+    densidadeCorporal = 1.0994921 - (0.0009929 * somaDobras) + (0.0000023 * Math.pow(somaDobras, 2)) - (0.0001392 * idadeNum)
+  }
+
+  return (495 / densidadeCorporal) - 450
+}
+
+export default function ResultadoGordura({ dados, sexo }) {
+  const percentual = calcularPercentual(dados, sexo)
+
   const getCategoria = (percentual) => {
     if (sexo === 'homem') {
       if (percentual < 6) return { label: 'Atletico', cor: '#FFD700' }
@@ -28,7 +56,6 @@ export default function ResultadoGordura({ resultado, sexo }) {
     return descricoes[categoria.label]
   }
 
-  const percentual = resultado.percentualGordura
   const categoria = getCategoria(percentual)
 
   return (

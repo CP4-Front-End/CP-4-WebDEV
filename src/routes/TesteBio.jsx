@@ -12,22 +12,44 @@ const TesteBio = () => {
   const [coxa, setCoxa] = useState('')
   const [triceps, setTriceps] = useState('')
   const [suprailiaca, setSuprailiaca] = useState('')
-  const [resultado, setResultado] = useState(null)
   const [mostrarResultado, setMostrarResultado] = useState(false)
+  const [erro, setErro] = useState(null)
 
   const limparResultado = () => {
     setMostrarResultado(false)
-    setResultado(null)
+    setErro(null)
+  }
+
+  const validarDados = () => {
+    const idadeNum = parseFloat(idade)
+
+    if (!idadeNum || idadeNum < 10 || idadeNum > 100) {
+      return { valido: false, mensagem: 'Insira uma idade valida (10-100 anos)' }
+    }
+
+    if (sexo === 'homem') {
+      if (!peito || !abdomen || !coxa) {
+        return { valido: false, mensagem: 'Preencha todas as dobras cutaneas' }
+      }
+    } else {
+      if (!triceps || !suprailiaca || !coxa) {
+        return { valido: false, mensagem: 'Preencha todas as dobras cutaneas' }
+      }
+    }
+
+    return { valido: true }
   }
 
   const calcular = () => {
-    const valores = { idade, peito, abdomen, coxa, triceps, suprailiaca }
-    const percentual = window.calcularGorduraDobras?.()
-    
-    if (percentual !== null && percentual !== undefined) {
-      setResultado({ percentualGordura: percentual })
-      setMostrarResultado(true)
+    const validacao = validarDados()
+    if (!validacao.valido) {
+      setErro(validacao.mensagem)
+      setMostrarResultado(false)
+      return
     }
+
+    setErro(null)
+    setMostrarResultado(true)
   }
 
   const handleDobrasChange = (field, value) => {
@@ -81,7 +103,6 @@ const TesteBio = () => {
               idade={idade}
               valores={valores}
               onChange={handleDobrasChange}
-              onCalcular={true}
             />
 
             <button
@@ -92,8 +113,12 @@ const TesteBio = () => {
               Calcular Gordura
             </button>
 
-            {mostrarResultado && resultado && (
-              <ResultadoGordura resultado={resultado} sexo={sexo} />
+            {mostrarResultado && (
+              <ResultadoGordura dados={{ idade, peito, abdomen, coxa, triceps, suprailiaca }} sexo={sexo} />
+            )}
+
+            {erro && (
+              <p className="text-red-500 text-center mt-4 font-medium">{erro}</p>
             )}
           </div>
 
