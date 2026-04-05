@@ -44,10 +44,7 @@ export default function Planos() {
       <div className="max-w-5xl mx-auto">
         
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-orange-500/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg mb-6 border border-orange-500/30">
-            <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
-            <span className="text-sm font-medium text-orange-400">Planos flexiveis para seu objetivo</span>
-          </div>
+          
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">
             Escolha seu <span className="text-orange-500">plano</span>
           </h1>
