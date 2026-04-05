@@ -10,10 +10,6 @@ export default function Banner() {
       <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-orange-400/10 rounded-full blur-2xl"></div>
 
       <div className="relative z-10 mx-auto max-w-5xl px-6 py-20 text-center">
-        <div className="inline-flex items-center gap-2 bg-orange-500/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg mb-6 border border-orange-500/30">
-          <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
-          <span className="text-sm font-medium text-orange-400">Transforme seu corpo aqui</span>
-        </div>
 
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
           Academia <span className="text-orange-500">Inteligente</span>
