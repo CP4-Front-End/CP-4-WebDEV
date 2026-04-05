@@ -22,6 +22,7 @@ export default function Unidades() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.309710042708!2d-46.6591186!3d-23.5573177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519788ac6805489%3A0xf1b38715667d49be!2sAcademia%20Smart%20Fit%20-%20Augusta!5e0!3m2!1spt-BR!2sbr!4v1775240311678!5m2!1spt-BR!2sbr"
             className="w-full h-[300px] border-0 rounded-xl mt-4"
             loading="lazy"
+            decoding="async"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
           />      
@@ -41,6 +42,7 @@ export default function Unidades() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2491890128763!2d-46.667308!3d-23.559492199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59373d7a85e1%3A0x8ae921c0060879bd!2sAcademia%20Smart%20Fit%20-%20Rua%20da%20Consola%C3%A7%C3%A3o%20II!5e0!3m2!1spt-BR!2sbr!4v1775240563743!5m2!1spt-BR!2sbr"
             className="w-full h-[300px] border-0 rounded-xl mt-4"
             loading="lazy"
+            decoding="async"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
           />
@@ -61,6 +63,7 @@ export default function Unidades() {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0439878398493!2d-46.6492442!3d-23.566863599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59b8db8ef699%3A0x1c7694e9609dbc60!2sAv.%20Paulista%2C%20664%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-200!5e0!3m2!1spt-BR!2sbr!4v1775240788531!5m2!1spt-BR!2sbr"
               className="w-full h-[300px] border-0 rounded-xl mt-4"
               loading="lazy"
+              decoding="async"
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen
             />
