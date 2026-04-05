@@ -10,10 +10,10 @@ O objetivo foi construir uma interface funcional e visualmente consistente, simu
 ---
 
 ## Integrantes
-- **Gabriel Ardito**
-- **Felipe Menezes**
-- **João Sarracine**
-- **João Gonzales**
+- **Gabriel Ardito** RM 568318
+- **Felipe Menezes** RM 566607
+- **João Sarracine** RM 567407
+- **João Gonzales** RM 568166
 
 ---
 
