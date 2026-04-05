@@ -3,7 +3,6 @@ import Header from '../components/Header'
 import ToggleSexo from '../components/ToggleSexo'
 import DobrasForm from '../components/DobrasForm'
 import ResultadoGordura from '../components/ResultadoGordura'
-import { calcularGordura, validarDados } from '../utils/calculosBio'
 
 const TesteBio = () => {
   const [sexo, setSexo] = useState('homem')
@@ -22,18 +21,26 @@ const TesteBio = () => {
   }
 
   const calcular = () => {
-    const dados = { sexo, idade, peito, abdomen, coxa, triceps, suprailiaca }
-    const validacao = validarDados(dados)
+    const valores = { idade, peito, abdomen, coxa, triceps, suprailiaca }
+    const percentual = window.calcularGorduraDobras?.()
     
-    if (!validacao.valido) {
-      alert(validacao.mensagem)
-      return
+    if (percentual !== null && percentual !== undefined) {
+      setResultado({ percentualGordura: percentual })
+      setMostrarResultado(true)
     }
-
-    const percentual = calcularGordura(dados)
-    setResultado({ percentualGordura: percentual })
-    setMostrarResultado(true)
   }
+
+  const handleDobrasChange = (field, value) => {
+    switch(field) {
+      case 'peito': setPeito(value); break
+      case 'abdomen': setAbdomen(value); break
+      case 'coxa': setCoxa(value); break
+      case 'triceps': setTriceps(value); break
+      case 'suprailiaca': setSuprailiaca(value); break
+    }
+  }
+
+  const valores = { peito, abdomen, coxa, triceps, suprailiaca }
 
   return (
     <>
@@ -71,11 +78,10 @@ const TesteBio = () => {
 
             <DobrasForm 
               sexo={sexo}
-              peito={peito} setPeito={setPeito}
-              abdomen={abdomen} setAbdomen={setAbdomen}
-              coxa={coxa} setCoxa={setCoxa}
-              triceps={triceps} setTriceps={setTriceps}
-              suprailiaca={suprailiaca} setSuprailiaca={setSuprailiaca}
+              idade={idade}
+              valores={valores}
+              onChange={handleDobrasChange}
+              onCalcular={true}
             />
 
             <button

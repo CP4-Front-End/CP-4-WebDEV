@@ -3,7 +3,7 @@
 ## Descrição do Projeto
 Este repositório contém o desenvolvimento da **Academia Inteligente**, um projeto acadêmico de front-end criado para simular a presença digital de uma academia moderna, com foco em **experiência do usuário**, **navegação intuitiva**, **visual responsivo** e **organização por rotas**.
 
-A aplicação foi desenvolvida com **React**, utilizando **Vite** como ambiente de desenvolvimento e build, além de **Tailwind CSS** para estilização. O projeto apresenta uma proposta visual clean e contemporânea, com páginas dedicadas a **home**, **unidades**, **IMC**, **bioimpedância**, **contato**, **planos** e **sobre**.
+A aplicação foi desenvolvida com **React**, utilizando **Vite** como ambiente de desenvolvimento e build, além de **Tailwind CSS** para estilização. O projeto apresenta uma proposta visual clean e contemporânea, com páginas dedicadas a **home**, **unidades**, **IMC**, **bioimpedância**, **teste de composição corporal**, **contato**, **planos** e **sobre**.
 
 O objetivo foi construir uma interface funcional e visualmente consistente, simulando uma aplicação real para academia, reunindo informações institucionais, recursos de navegação entre páginas e componentes reutilizáveis.
 
@@ -57,6 +57,13 @@ O projeto conta com as seguintes páginas e recursos:
   - Apresentação de benefícios e informações sobre o serviço
   - Organização visual pensada para complementar os serviços da academia
 
+- **Página de teste de composição corporal (`TesteBio`)**
+  - Cálculo de percentual de gordura (Jackson-Pollock 3)
+  - Toggle para seleção de sexo
+  - Formulário de dobras cutâneas específico por gênero
+  - Validação de dados
+  - Resultado visual com categoria e descrição
+
 - **Página de contato (`Contato`)**
   - Formulário com campos de nome, sobrenome e e-mail
   - Seleção de notificações de interesse
@@ -95,10 +102,15 @@ O projeto conta com as seguintes páginas e recursos:
 ├── src/
 │   ├── components/
 │   │   ├── Banner.jsx
+│   │   ├── DobrasForm.jsx
 │   │   ├── Footer.jsx
+│   │   ├── FormularioDados.jsx
 │   │   ├── Header.jsx
 │   │   ├── Resultado.jsx
-│   │   └── ResultadoBio.jsx
+│   │   ├── ResultadoBio.jsx
+│   │   ├── ResultadoComposição.jsx
+│   │   ├── ResultadoGordura.jsx
+│   │   └── ToggleSexo.jsx
 │   │
 │   ├── routes/
 │   │   ├── Bio.jsx
@@ -108,7 +120,11 @@ O projeto conta com as seguintes páginas e recursos:
 │   │   ├── Imc.jsx
 │   │   ├── Planos.jsx
 │   │   ├── Sobre.jsx
+│   │   ├── TesteBio.jsx
 │   │   └── Unidades.jsx
+│   │
+│   ├── hooks/
+│   │   └── useCalculosBio.js
 │   │
 │   ├── App.jsx
 │   ├── index.css
@@ -157,10 +173,10 @@ Foram utilizados:
 ## Identidade Visual
 A identidade visual do projeto foi construída para transmitir a proposta de uma academia moderna, tecnológica e acessível, utilizando:
 
-- fundo neutro em tom claro
-- destaque em **verde** para títulos e elementos principais
-- uso de **amarelo** como cor de ação e contraste
-- textos em tons escuros para legibilidade
+- fundo neutro em **preto**
+- destaque em **laranja** para títulos e elementos principais
+- uso de **preto** como cor de fundo principal
+- textos em tons claros para legibilidade no tema escuro
 - cards com bordas arredondadas e organização limpa
 - composição visual pensada para transmitir energia, clareza e confiança
 
