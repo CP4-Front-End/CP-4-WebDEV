@@ -18,12 +18,12 @@ O objetivo foi construir uma interface funcional e visualmente consistente, simu
 ## Repositório
 
 Acesse o código do projeto aqui:  
-[🔗 GitHub](https://github.com/CP4-Front-End/CP-4-WebDEV.git)
+[GitHub](https://github.com/CP4-Front-End/CP-4-WebDEV.git)
 ---
 ## Demonstração
 
 Confira o vídeo do projeto no LinkedIn:  
-[ Assistir vídeo](https://www.linkedin.com/posts/gabriel-ardito-manes-9418a8349_ol%C3%A1-rede-passando-para-mostrar-um-pouco-activity-7446712826544717826-k0mU)
+[Assistir vídeo](https://www.linkedin.com/posts/gabriel-ardito-manes-9418a8349_ol%C3%A1-rede-passando-para-mostrar-um-pouco-activity-7446712826544717826-k0mU)
 ---
 
 ## Objetivo
